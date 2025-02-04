@@ -35,3 +35,39 @@ sbt '~test'
 ```
 
 That'll boot up the test watcher.
+
+# Guide to Doing Better Faster
+
+## Non-Technicals Guidelines
+
+Before you write the code down, ensure you have a clear path to understanding the problem well, and then tackling the solution.
+
+0. No replacement for understanding algorithms and datastructures
+If you need to brush up, take sedgewick's textbook or the princeton course on coursera and just blast through it again. It'll get you sharp with knowing which structure/algorithm to pick for the problem.
+
+"When in doubt, use a map." 
+
+You can always start with a naive solution and then improve it, although it's better to consider what you need to do to solve the problem early by reasoning about the solution space/time complexity.
+
+2. Ensure you have a clear understanding of the problem.
+ 
+As an example, a magic square problem where every row and column must equal the same number, you first must understand that there is a "correct solution" depending on the grid size. 
+
+x x x 
+x x x
+x x x
+
+Will have numbers 1,2,3,4,5,6,7,8,9
+If you miss this part, you'll be far away from the solution. Adding these numbers up == 45, and diving them by the number of rows or columns will give you the answer: 15. So you must make the magic square with each row/column equalling 45. If you don't get the problem, trying to approach the code won't get you any closer to the solution. 
+
+See: https://en.wikipedia.org/wiki/Magic_square
+
+2. Ensure you have a clear and precise understanding of the inputs and expected outputs. Edge cases etc.
+
+Check the types of inputs vs outputs, consider rolling over of integers etc.
+
+If you're solving fizzbuzz and you're expected to solve for 1 to n where n is the input, inclusive, you need to ensure you have that criteria clearly defined of you'll waste time trying to understand why your solution isn't correct, even if you solved the problem correctly.
+
+3. Language Cheat Sheet
+
+Many of us are solving problems with GenAI most of the time these days, so we get rusty with language details. We might be offloading a lof of the coding details to our LLM "intermediate developer" and focusing on higher level design. Or we're polyglots switching between 10 different languages depending on the problems space. I might touch C#, Python, Scala and Rust for a month and then not see them for another 6 months. Putting together a quick "cheat sheet" of things like range declarations, match statements, for comprehensions etc for the language can help you avoid any syntax issues by referencing your little language example sheet.
